@@ -1,0 +1,32 @@
+{
+  "overrides": [
+    {
+      "extends": [
+        // https://github.com/forcedotcom/eslint-plugin-aura
+        "plugin:@salesforce/eslint-plugin-aura/recommended",
+        "eslint-config-sf-common"
+      ],
+      "files": [
+        "src/**/aura/**"
+      ],
+      "plugins": [
+        "@salesforce/eslint-plugin-aura"
+      ],
+      // override rules which are not applicable to Aura
+      "rules": {
+        "no-unused-expressions": "off",
+        "object-shorthand": "off"
+      }
+    },
+    {
+      "extends": [
+        // https://github.com/salesforce/eslint-config-lwc
+        "@salesforce/eslint-config-lwc/recommended",
+        "eslint-config-sf-common"
+      ],
+      "files": [
+        "src/**/lwc/**"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "projectName": "dx-template",
+  "packageIds": [],
+  "permsetGroups": [],
+  "postCreateManualSteps": {
+    "apexOrgVerification": "scripts/anonymous-apex/verifyOrgFeatures.apex",
+    "continueInstruction": "Please, continue by running 'npm run sfci:init:postcreate' command.",
+    "features": [
+      {
+        "name": "ContactsToMultipleAccounts",
+        "manualStepDescription": "Open the new scratch org, go to Setup/Account Settings and enable 'Allow users to relate a contact to multiple accounts'."
+      }
+    ],
+    "settings": {
+      "accountSettings": {
+        "enableRelateContactToMultipleAccounts": true
+      }
+    }
+  }
+}

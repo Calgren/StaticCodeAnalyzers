@@ -1,0 +1,36 @@
+<!--
+ - Created by tomas.chour on 10.10.2022.
+ -->
+
+<!-- Es Lint Training -->
+<template>
+    <lightning-card>
+        <div>
+            <lightning-layout multiple-rows>
+                <template iterator:it={contacts}>
+                    <lightning-layout-item size=3 key={it.value.index} class="slds-p-around_medium">
+                        <lightning-input type="text" label="First Name" value={it.value.FirstName}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size=3 key={it.value.index} class="slds-p-around_medium">
+                        <lightning-input type="text" label="Last Name" value={it.value.LastName}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size=3 key={it.value.index} class="slds-p-around_medium">
+                        <lightning-input type="text" label="Email" value={it.value.Email}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item if:true={it.last} size=1 key={it.value.index} class="slds-p-around_medium slds-m-top_large">
+                        <lightning-button-icon data-index={it.value.index} onclick={addContact} icon-name="utility:add"
+                                               size="large" variant="bare" alternative-text="Add"
+                                               class="slds-m-left_xx-small"></lightning-button-icon>
+                    </lightning-layout-item>
+                    <lightning-layout-item if:false={it.last} size=1 key={it.value.index} class="slds-p-around_medium slds-m-top_large">
+                        <lightning-button-icon data-index={it.value.index} onclick={removeContact}
+                                               icon-name="utility:dash" size="large" variant="bare"
+                                               alternative-text="Add"
+                                               class="slds-m-left_xx-small"></lightning-button-icon>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+        </div>
+
+    </lightning-card>
+</template>

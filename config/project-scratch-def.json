@@ -1,0 +1,18 @@
+{
+  "orgName": "DX Template",
+  "edition": "Enterprise",
+  "adminEmail": "admin@bearingpoint.com.invalid",
+  "country": "CZ",
+  "language": "en_US",
+  "features": [],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "userManagementSettings": {
+      "enableEnhancedPermsetMgmt": true,
+      "enableEnhancedProfileMgmt": true,
+      "enableNewProfileUI": true
+    }
+  }
+}
